@@ -25,7 +25,7 @@ export default function ContactPage() {
           <Link href="/services" className="underline">Explore services</Link> or share a brief note and we’ll reply within 1 business day.
         </p>
       </div>
-      <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+      <form className="space-y-4" noValidate>
         <div>
           <label className="block text-sm" htmlFor="name">Name</label>
           <input id="name" name="name" className="mt-1 w-full border border-black/15 rounded px-3 py-2" />
@@ -39,11 +39,10 @@ export default function ContactPage() {
           <textarea id="message" name="message" rows={5} className="mt-1 w-full border border-black/15 rounded px-3 py-2" />
         </div>
         <div className="flex gap-3">
-          <button className="px-4 py-2 border border-black rounded hover:bg-black hover:text-white transition-colors">Send</button>
+          <button type="button" className="px-4 py-2 border border-black rounded hover:bg-black hover:text-white transition-colors">Send</button>
           <a className="px-4 py-2 underline" href={`mailto:${site.contactEmail}`}>Open email</a>
         </div>
       </form>
     </section>
   );
 }
-
