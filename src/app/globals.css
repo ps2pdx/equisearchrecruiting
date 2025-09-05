@@ -2,25 +2,51 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+
+  /* Tribal accent palette */
+  --accent-red: #b91c1c; /* red-700 */
+  --accent-yellow: #ca8a04; /* yellow-600 */
+  --accent-green: #15803d; /* green-700 */
+  --accent-black: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent-red: var(--accent-red);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-green: var(--accent-green);
+  --color-accent-black: var(--accent-black);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base typography */
+html, body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "ss01" on, "liga" on, "kern" on;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  text-underline-offset: 3px;
+}
+
+.container-px {
+  padding-left: clamp(16px, 4vw, 32px);
+  padding-right: clamp(16px, 4vw, 32px);
+}
+
+/* Thin tri-color accent bar */
+.accent-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 3px;
+}
+.accent-bar > span:nth-child(1) { background: var(--accent-red); }
+.accent-bar > span:nth-child(2) { background: var(--accent-yellow); }
+.accent-bar > span:nth-child(3) { background: var(--accent-green); }
