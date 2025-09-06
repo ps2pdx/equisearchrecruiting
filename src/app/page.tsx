@@ -27,7 +27,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-          src="/images/headshot.jpg"
+          src="/images/headshot.jpeg"
           alt="Founder headshot"
           width={200}
           height={200}
