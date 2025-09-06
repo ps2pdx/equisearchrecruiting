@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | EquiSearch Recruiting",
@@ -7,6 +8,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section className="space-y-6 max-w-3xl">
+      <div>
+        <Image
+          src="/images/office.jpg"
+          alt="Office environment"
+          width={1200}
+          height={500}
+          priority
+          className="w-full h-auto rounded border border-black/10 object-cover"
+        />
+      </div>
       <h1 className="text-2xl sm:text-3xl font-semibold">About</h1>
       <p className="text-black/80">
         EquiSearch Recruiting is a values-driven recruiting partner focused on equity and
@@ -21,4 +32,3 @@ export default function AboutPage() {
     </section>
   );
 }
-
