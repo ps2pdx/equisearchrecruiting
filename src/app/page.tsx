@@ -32,6 +32,8 @@ export default function Home() {
           width={200}
           height={200}
           priority
+          unoptimized
+          referrerPolicy="no-referrer"
           className="rounded-full border border-black/10 object-cover"
         />
       </div>
