@@ -19,6 +19,13 @@ export default function AboutPage() {
         />
       </div>
       <h1 className="text-2xl sm:text-3xl font-semibold">About</h1>
+      <Image
+        src="/images/headshot.jpeg"
+        alt="Founder headshot"
+        width={200}
+        height={200}
+        className="rounded-full border border-black/10 object-cover"
+      />
       <p className="text-black/80">
         EquiSearch Recruiting is a values-driven recruiting partner focused on equity and
         opportunity. Founded with Native roots, our mission is to elevate Indigenous and POC

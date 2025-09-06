@@ -5,27 +5,10 @@ import { site } from "@/lib/site";
 export default function Home() {
   return (
     <section className="space-y-8">
-      <div className="flex flex-col sm:flex-row items-start justify-between gap-6">
-        <div className="space-y-5 flex-1">
-          <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">
-            Equitable recruiting for the next generation of leaders
-          </h1>
-          <p className="max-w-2xl text-black/70">
-            {site.tagline} We partner with companies to build diverse, high-impact teams
-            while opening doors for Indigenous communities and people of color.
-          </p>
-          <div className="flex gap-4">
-            <Link
-              href="/contact"
-              className="px-4 py-2 border border-black rounded hover:bg-black hover:text-white transition-colors"
-            >
-              Get in touch
-            </Link>
-            <Link href="/services" className="px-4 py-2 underline">
-              Our services
-            </Link>
-          </div>
-        </div>
+      <div className="space-y-5">
+        <h1 className="text-3xl sm:text-5xl font-semibold leading-tight">
+          Equitable recruiting for the next generation of leaders
+        </h1>
         <Image
           src="/images/headshot.jpeg"
           alt="Founder headshot"
@@ -34,6 +17,21 @@ export default function Home() {
           priority
           className="rounded-full border border-black/10 object-cover"
         />
+        <p className="max-w-2xl text-black/70">
+          {site.tagline} We partner with companies to build diverse, high-impact teams
+          while opening doors for Indigenous communities and people of color.
+        </p>
+        <div className="flex gap-4">
+          <Link
+            href="/contact"
+            className="px-4 py-2 border border-black rounded hover:bg-black hover:text-white transition-colors"
+          >
+            Get in touch
+          </Link>
+          <Link href="/services" className="px-4 py-2 underline">
+            Our services
+          </Link>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
