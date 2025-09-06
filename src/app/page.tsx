@@ -27,13 +27,11 @@ export default function Home() {
           </div>
         </div>
         <Image
-          src="https://media.licdn.com/dms/image/v2/D5603AQHhxjJ4D1gvXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705116152714?e=1759968000&v=beta&t=XYkv6wjlWCovW90mTofYjYXisC2Qycvuf1dliFXAVu4"
+          src="/images/headshot.jpg"
           alt="Founder headshot"
           width={200}
           height={200}
           priority
-          unoptimized
-          referrerPolicy="no-referrer"
           className="rounded-full border border-black/10 object-cover"
         />
       </div>
